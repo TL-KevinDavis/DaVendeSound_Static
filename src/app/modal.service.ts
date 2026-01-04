@@ -31,15 +31,19 @@ export class ModalService {
     let slideIndex = n;
     if (n > slides.length) { slideIndex = 1; }
     if (n < 1) { slideIndex = slides.length; }
+    
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }
+    
     if (slides.length > 0) {
       slides[slideIndex - 1].style.display = 'block';
+      // Autoplay video if the current slide contains one
+      this.autoplayCurrentVideo(m, slideIndex);
     }
+    
     this.slideIndex = slideIndex;
   }
-
 
   // Stop all videos in the modal when changing slides or closing modal
   stopAllVideos() {
@@ -54,13 +58,14 @@ export class ModalService {
   }
 
   autoplayCurrentVideo(m: number, n: number) {
-    var slides = document.getElementsByClassName("mySlides" + m);
-    var currentSlide = slides[n - 1];
+    const slides = document.getElementsByClassName(`mySlides${m}`) as HTMLCollectionOf<HTMLElement>;
+    const currentSlide = slides[n - 1];
     if (!currentSlide) return;
-    var video = currentSlide.querySelector('video');
+    
+    const video = currentSlide.querySelector('video');
     if (video) {
       video.muted = true;
-      video.play();
+      video.play().catch(() => { /* ignore autoplay block errors */ });
     }
   }
 }

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProSound } from './pro-sound';
+import { ProSound } from './pro-sound.component';
 
 describe('ProSound', () => {
   let component: ProSound;

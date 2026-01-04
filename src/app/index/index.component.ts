@@ -1,14 +1,19 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { ModalService } from '../modal.service';
+import { MediaService } from '../media.service';
 
 @Component({
   selector: 'app-index',
   standalone: true,
+  imports: [],
   templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  styleUrls: ['./index.component.css'],
+  providers: [MediaService]
 })
 export class IndexComponent implements AfterViewInit {
-  constructor(public modalService: ModalService) {}
+  slideIndex = 1;
+
+  constructor(public modalService: ModalService, public media: MediaService) {}
 
   ngAfterViewInit() {
     // Set background images for .item a
@@ -28,28 +33,40 @@ export class IndexComponent implements AfterViewInit {
     });
   }
 
-  // Modal methods are now handled by ModalService
   openModal(m: number): void {
-    this.modalService.openModal(m);
+    const modal = document.getElementById(`myModal${m}`);
+    if (modal) modal.style.display = 'inline';
+    this.slideIndex = 1;
+    this.showSlides(this.slideIndex, m);
   }
 
   closeModal(m: number): void {
-    this.modalService.closeModal(m);
     this.modalService.stopAllVideos();
+    const modal = document.getElementById(`myModal${m}`);
+    if (modal) modal.style.display = 'none';
   }
 
   plusSlides(n: number, m: number): void {
-    this.modalService.plusSlides(n, m);
-    this.modalService.autoplayCurrentVideo(m, this.modalService.slideIndex);
+    this.modalService.stopAllVideos();
+    this.showSlides(this.slideIndex += n, m);
   }
 
   currentSlide(n: number, m: number): void {
-    this.modalService.currentSlide(n, m);
-    this.modalService.autoplayCurrentVideo(m, n);
+    this.showSlides(this.slideIndex = n, m);
   }
 
-  stopAllVideos(): void {
-    this.modalService.stopAllVideos();
+  showSlides(n: number, m: number): void {
+    const slides = document.getElementsByClassName(`mySlides${m}`) as HTMLCollectionOf<HTMLElement>;
+    let slideIndex = n;
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+    if (slides.length > 0) {
+      slides[slideIndex - 1].style.display = 'block';
+    }
+    this.slideIndex = slideIndex;
   }
 
   autoplayCurrentVideo(m: number, n: number): void {

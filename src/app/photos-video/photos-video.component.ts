@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { MediaService } from '../media.service';
 import { ModalService } from '../modal.service';
 
 @Component({
@@ -8,35 +9,45 @@ import { ModalService } from '../modal.service';
   styleUrls: ['./photos-video.component.css']
 })
 export class PhotosVideoComponent implements AfterViewInit {
-  constructor(public modalService: ModalService) {}
+  slideIndex = 1;
 
-  ngAfterViewInit() {
+  constructor(public media: MediaService, public modalService: ModalService) {}
+
+  ngAfterViewInit(): void {
     const videos = document.querySelectorAll('video');
     videos.forEach(video => {
       video.muted = true;
       video.autoplay = false;
     });
+
+    const list = document.querySelectorAll('.item a');
+    for (let i = 0; i < list.length; i++) {
+      const url = (list[i].children[0] as HTMLElement).getAttribute('src');
+      if (url) (list[i] as HTMLElement).setAttribute('style', `background-image: url('${url}')`);
+    }
   }
 
   openModal(id: number): void {
-    this.modalService.openModal(id);
+    const modal = document.getElementById(`myModal${id}`);
+    if (modal) modal.style.display = 'inline';
+    this.slideIndex = 1;
+    this.modalService.showSlides(this.slideIndex, id);
   }
+
   closeModal(id: number): void {
-    this.modalService.closeModal(id);
     this.modalService.stopAllVideos();
+    const modal = document.getElementById(`myModal${id}`);
+    if (modal) modal.style.display = 'none';
   }
+
   plusSlides(n: number, id: number): void {
-    this.modalService.plusSlides(n, id);
-    this.modalService.autoplayCurrentVideo(id, this.modalService.slideIndex);
-  }
-  currentSlide(n: number, id: number): void {
-    this.modalService.currentSlide(n, id);
-    this.modalService.autoplayCurrentVideo(id, n);
-  }
-  stopAllVideos(): void {
     this.modalService.stopAllVideos();
+    this.slideIndex += n;
+    this.modalService.showSlides(this.slideIndex, id);
   }
-  autoplayCurrentVideo(id: number, n: number): void {
-    this.modalService.autoplayCurrentVideo(id, n);
+
+  currentSlide(n: number, id: number): void {
+    this.slideIndex = n;
+    this.modalService.showSlides(this.slideIndex, id);
   }
 }
