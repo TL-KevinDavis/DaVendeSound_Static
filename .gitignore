@@ -40,8 +40,28 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+
+# Large media files - these should be in Azure Blob Storage, not Git
 src/assets/images/*.mp4
 src/assets/images/*.MP4
+src/assets/images/*.mov
+src/assets/images/*.MOV
+src/assets/images/*.avi
+src/assets/images/*.AVI
+src/assets/images/*.jpg
+src/assets/images/*.JPG
+src/assets/images/*.jpeg
+src/assets/images/*.JPEG
+src/assets/images/*.png
+src/assets/images/*.PNG
+src/assets/images/*.gif
+src/assets/images/*.GIF
+
+# Keep only essential assets (logo, icons, backgrounds)
+!src/assets/images/DaVendeLogo.jpg
+!src/assets/images/DaVendeSoundLogo.gif
+!src/assets/images/DaVendeSound.ico
+!src/assets/images/black_abstract_stone_pattern_tileable.jpg
 
 # System files
 .DS_Store
