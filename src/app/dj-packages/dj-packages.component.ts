@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalService } from '../modal.service';
+import { MediaService } from '../media.service';
 
 @Component({
   selector: 'app-dj-packages',
@@ -8,7 +9,7 @@ import { ModalService } from '../modal.service';
   styleUrls: ['./dj-packages.component.css']
 })
 export class DjPackagesComponent {
-  constructor(public modalService: ModalService) {}
+  constructor(public modalService: ModalService, public media: MediaService) {}
 
   openModal(id: number): void {
     this.modalService.openModal(id);
