@@ -23,11 +23,9 @@ export class MediaService {
     const normalized = (path || '').replace(/\\/g, '/');
 
     if (thumbnail) {
-      // Return thumbnail URL: RadianceParty.JPEG → RadianceParty_thumb.JPEG
-      const parts = normalized.split('.');
-      const thumbName = parts[0] + '_thumb.' + parts.slice(1).join('.');
+      // Return thumbnail URL - same filename, different container
       const normalizedBase = this.thumbBaseUrl.endsWith('/') ? this.thumbBaseUrl : this.thumbBaseUrl + '/';
-      return normalizedBase + thumbName;
+      return normalizedBase + normalized;
     }
 
     // Return full-size image URL (default)
