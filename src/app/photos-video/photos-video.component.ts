@@ -31,7 +31,8 @@ export class PhotosVideoComponent implements AfterViewInit {
     const modal = document.getElementById(`myModal${id}`);
     if (modal) modal.style.display = 'inline';
     this.slideIndex = 1;
-    this.modalService.showSlides(this.slideIndex, id);
+    // synchronize slideIndex with service (service returns normalized index)
+    this.slideIndex = this.modalService.showSlides(this.slideIndex, id);
   }
 
   closeModal(id: number): void {
@@ -43,11 +44,11 @@ export class PhotosVideoComponent implements AfterViewInit {
   plusSlides(n: number, id: number): void {
     this.modalService.stopAllVideos();
     this.slideIndex += n;
-    this.modalService.showSlides(this.slideIndex, id);
+    this.slideIndex = this.modalService.showSlides(this.slideIndex, id);
   }
 
   currentSlide(n: number, id: number): void {
     this.slideIndex = n;
-    this.modalService.showSlides(this.slideIndex, id);
+    this.slideIndex = this.modalService.showSlides(this.slideIndex, id);
   }
 }

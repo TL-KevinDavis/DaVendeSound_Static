@@ -23,12 +23,23 @@ export class MediaService {
     const normalized = (path || '').replace(/\\/g, '/');
 
     if (thumbnail) {
-      // Return thumbnail URL - same filename, different container
+      // For videos, thumbnail is a .jpg file with the same base name
+      const videoExtensions = ['.mp4', '.mov', '.avi', '.wmv', '.mkv', '.webm'];
+      const isVideo = videoExtensions.some(ext => normalized.toLowerCase().endsWith(ext));
+      
+      if (isVideo) {
+        // Video thumbnail: video.mp4 -> video.jpg
+        const baseName = normalized.substring(0, normalized.lastIndexOf('.'));
+        const normalizedBase = this.thumbBaseUrl.endsWith('/') ? this.thumbBaseUrl : this.thumbBaseUrl + '/';
+        return normalizedBase + baseName + '.jpg';
+      }
+      
+      // Image thumbnail: same filename in thumbnails container
       const normalizedBase = this.thumbBaseUrl.endsWith('/') ? this.thumbBaseUrl : this.thumbBaseUrl + '/';
       return normalizedBase + normalized;
     }
 
-    // Return full-size image URL (default)
+    // Return full-size image/video URL (default)
     const normalizedBase = this.baseUrl.endsWith('/') ? this.baseUrl : this.baseUrl + '/';
     return normalizedBase + normalized;
   }
