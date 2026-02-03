@@ -29,7 +29,7 @@ export class PhotosVideoComponent implements AfterViewInit {
 
   openModal(id: number): void {
     const modal = document.getElementById(`myModal${id}`);
-    if (modal) modal.style.display = 'inline';
+    if (modal) modal.style.display = 'block'; // use block so close button renders correctly
     this.slideIndex = 1;
     // synchronize slideIndex with service (service returns normalized index)
     this.slideIndex = this.modalService.showSlides(this.slideIndex, id);

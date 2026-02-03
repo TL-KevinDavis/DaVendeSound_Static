@@ -35,7 +35,7 @@ export class IndexComponent implements AfterViewInit {
 
   openModal(m: number): void {
     const modal = document.getElementById(`myModal${m}`);
-    if (modal) modal.style.display = 'inline';
+    if (modal) modal.style.display = 'block';
     this.slideIndex = 1;
     this.showSlides(this.slideIndex, m);
   }
