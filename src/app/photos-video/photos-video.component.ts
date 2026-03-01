@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Title, Meta } from '@angular/platform-browser';
 import { MediaService } from '../media.service';
 import { ModalService } from '../modal.service';
 
@@ -15,8 +16,17 @@ export class PhotosVideoComponent implements AfterViewInit {
   constructor(
     public media: MediaService, 
     public modalService: ModalService,
+    private titleService: Title,
+    private metaService: Meta,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) {
+    // Set page title and meta description
+    this.titleService.setTitle('Photos & Videos | DaVende Sound');
+    this.metaService.updateTag({ 
+      name: 'description', 
+      content: 'View our wedding and event photo and video gallery. See DaVende Sound DJ services, lighting setups, and satisfied clients across Mississippi and Louisiana.'
+    });
+  }
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
