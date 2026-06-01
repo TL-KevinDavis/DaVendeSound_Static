@@ -1,0 +1,211 @@
+/* Responsive Image Thumbnails - Must match .item dimensions for hexagon */
+.package-thumbnail {
+  height: 150px;
+  width: 250px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .package-thumbnail {
+    height: 100px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .package-thumbnail {
+    height: 80px;
+    width: 150px;
+  }
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  text-align: center;
+  margin-top: 5px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 0 15px;
+  }
+}
+
+/* Headings */
+.section-title {
+  text-decoration: underline;
+  color: cyan;
+  font-weight: bold;
+  text-align: center;
+  margin: 25px 0 20px 0;
+  font-size: 2rem;
+}
+
+.section-heading {
+  text-align: left;
+  margin: 15px 0;
+  font-size: 1.5rem;
+  padding-left: 75px;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.section-subheading {
+  text-align: left;
+  color: yellow;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  padding-left: 75px;
+}
+
+@media (max-width: 768px) {
+  .section-subheading {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.disclaimer-text {
+  text-align: left;
+  margin: 10px 0;
+  padding-left: 75px;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-text {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Lists */
+.packages-list {
+  text-align: left;
+  margin-top: 20px;
+  padding-left: 100px;
+}
+
+@media (max-width: 768px) {
+  .packages-list {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.packages-list li {
+  margin-bottom: 10px;
+}
+
+.packages-list h5 {
+  margin: 5px 0;
+}
+
+/* Description Text */
+.description-text {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 100%;
+  padding: 0 50px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .description-text {
+    padding: 0 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Section Content */
+.section-content {
+  text-align: center;
+  margin: 20px auto;
+  padding: 0 75px;
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    padding: 0 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Video Container */
+.video-container {
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.responsive-video {
+  width: 650px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .responsive-video {
+    width: 100%;
+  }
+}
+
+/* Pricing Highlight */
+.pricing-highlight {
+  font-style: italic;
+  color: yellow;
+  text-decoration: underline;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+/* Note Text */
+.note-text {
+  color: yellow;
+  margin-top: 25px;
+  font-size: 1.1rem;
+}
+
+/* Ensure proper heading sizes */
+h1 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin: 15px 0;
+}
+
+h5 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+That did noth
