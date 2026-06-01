@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ViewChild } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
@@ -9,4 +9,15 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('DaVendeSoundStatic');
+  @ViewChild('navbarNav') navbarNav: any;
+
+  closeNavbar() {
+    const navbarToggle = document.getElementById('navbarNav');
+    if (navbarToggle && navbarToggle.classList.contains('show')) {
+      const collapseBtn = document.querySelector('[data-bs-target="#navbarNav"]') as HTMLElement;
+      if (collapseBtn) {
+        collapseBtn.click();
+      }
+    }
+  }
 }
