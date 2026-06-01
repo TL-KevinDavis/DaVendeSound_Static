@@ -58,7 +58,8 @@
   <li class="item"><a (click)="openModal(2);currentSlide(1, 2)" class="hover-shadow" title="01"><img [src]="media.url('RadianceParty2.jpeg', true)" alt="01"></a></li>
   <li class="item"><a (click)="openModal(2);currentSlide(2, 2)" class="hover-shadow" title="02"><img [src]="media.url('UrsineWedding2.jpeg', true)" alt="02" style="height: 150px; width: 250px"></a></li>
   <li class="item"><a (click)="openModal(2);currentSlide(3, 2)" class="hover-shadow" title="03"><img [src]="media.url('WheatleyWedding.jpeg', true)" alt="03" style="height: 150px; width: 250px"></a></li>
-  <li class="item"><a (click)="openModal(2);currentSlide(4, 2)" class="hover-shadow" title="04"><img [src]="media.url('LofreddoWedding2.JPEG', true)" alt="04" style="height: 150px; width: 250px"></a>
+  <li class="item">
+    <a (click)="openModal(2);currentSlide(4, 2)" class="hover-shadow" title="04"><img [src]="media.url('LofreddoWedding2.JPEG', true)" alt="04" style="height: 150px; width: 250px"></a>
   </li>
   <li class="item"><a (click)="openModal(2);currentSlide(5, 2)" class="hover-shadow" title="05"><img [src]="media.url('ReevesWedding2.jpg', true)" alt="05" style="height: 150px; width: 250px"></a></li>
 </ul>
@@ -111,16 +112,14 @@
   </h3>
 </div>
 
-<div style="text-align:center">
-  <video controls="controls" autoplay muted loop width="650" preload="auto" style="text-align:center">
+<div class="video-container">
+  <video controls="controls" autoplay muted playsinline loop preload="auto" class="responsive-video">
     <source [src]="media.url('ReevesWedding.MP4')" type="video/mp4" />
   </video>
 </div>
 
-<div style="text-align:center; margin-top: 25px">
-  <video controls="controls" autoplay muted loop width="650" preload="auto" style="text-align:center">
+<div class="video-container">
+  <video controls="controls" autoplay muted playsinline loop preload="auto" class="responsive-video">
     <source [src]="media.url('UrsineWedding.mp4')" type="video/mp4" />
   </video>
 </div>
-
-
