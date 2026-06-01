@@ -1,43 +1,74 @@
-  <header class="pt-3">
-    <div class="container text-center border border-warning border-5 pb-0" style="width: 850px">
-      <h1 class="fw-bold fst-italic display-3 text-warning m-0">DaVende Sound</h1>
-      <h2 class="mt-0 pt-0 mb-2 text-info pb-0">Premier DJ, Sound and Lighting Services</h2>
+<!-- Header -->
+<header class="pt-2 pt-md-3">
+  <!-- Logo/Title Section -->
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <div class="text-center border border-warning border-3 border-md-5 pb-0 mx-2 mx-md-0">
+          <h1 class="fw-bold fst-italic display-6 display-md-4 text-warning m-0 px-2">DaVende Sound</h1>
+          <h2 class="mt-0 pt-0 mb-2 text-info pb-0 h5 h4-md px-2">Premier DJ, Sound and Lighting Services</h2>
+        </div>
+      </div>
     </div>
-    <p class="fw-bold fst-italic fs-4 text-warning text-center m-0">Call Us @ 601-456-0007  or email <a href="mailto:sales@davendesound.com">sales@davendesound.com</a></p>
-    <nav class="navbar navbar-expand-lg navbar-light w-0 p-0">
-      <div class="container justify-content-center">
-        <ul class="navbar-nav flex-grow-1 justify-content-center">
+  </div>
+
+  <!-- Contact Info -->
+  <div class="container-fluid mt-2 mt-md-3">
+    <p class="fw-bold fst-italic fs-6 fs-md-5 text-warning text-center m-0 px-2">
+      Call Us @ <a href="tel:601-456-0007" class="text-warning text-decoration-none">601-456-0007</a> or email <a href="mailto:sales@davendesound.com" class="text-warning text-decoration-none">sales@davendesound.com</a>
+    </p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md navbar-dark w-100 p-0 mt-2 mt-md-3">
+    <div class="container-fluid justify-content-center">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline fs-4" routerLink="/">Home</a>
+            <a class="nav-link text-info text-decoration-underline fs-6 fs-md-5" routerLink="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline fs-4" routerLink="/dj-packages">DJ Packages</a>
+            <a class="nav-link text-info text-decoration-underline fs-6 fs-md-5" routerLink="/dj-packages">DJ Packages</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline fs-4" routerLink="/photos-video">Photo/Video</a>
+            <a class="nav-link text-info text-decoration-underline fs-6 fs-md-5" routerLink="/photos-video">Photo/Video</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline fs-4" routerLink="/pro-sound">Pro Sound</a>
+            <a class="nav-link text-info text-decoration-underline fs-6 fs-md-5" routerLink="/pro-sound">Pro Sound</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline fs-4" routerLink="/locations">Locations</a>
+            <a class="nav-link text-info text-decoration-underline fs-6 fs-md-5" routerLink="/locations">Locations</a>
           </li>
         </ul>
       </div>
-    </nav>
-  </header>
-  <main class="container my-5 d-flex justify-content-center">
-    <div class="w-100" style="max-width: 1000px;">
+    </div>
+  </nav>
+</header>
 
+<!-- Main Content -->
+<main class="container-fluid py-4 py-md-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10" style="max-width: 1000px;">
       <router-outlet></router-outlet>
-
     </div>
-  </main>
-  <footer class="border-top footer text-muted mt-4">
-    <div class="container" style="color: white">
-      &copy; 2026 - DaVende Sound<br />
-      Email: <a href="mailto:sales@davendesound.com">sales@davendesound.com</a> | Phone: (601)456-0007<br />
-      Version 2.1.1
-    </div>
-  </footer>
+  </div>
+</main>
 
+<!-- Footer -->
+<footer class="border-top footer text-muted mt-4 py-3 py-md-4">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 text-center text-md-start" style="color: white">
+        <p class="mb-2">&copy; 2026 - DaVende Sound</p>
+        <p class="mb-2">
+          Email: <a href="mailto:sales@davendesound.com" class="text-warning text-decoration-none">sales@davendesound.com</a> |
+          Phone: <a href="tel:601-456-0007" class="text-warning text-decoration-none">(601)456-0007</a>
+        </p>
+        <p class="mb-0">Version 2.1.1</p>
+      </div>
+    </div>
+  </div>
+</footer>
