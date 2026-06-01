@@ -1,5 +1,5 @@
-import { Component, signal, ViewChild } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { Component, signal } from '@angular/core';
+import { Router, RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +9,15 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('DaVendeSoundStatic');
-  @ViewChild('navbarNav') navbarNav: any;
+
+  constructor(private router: Router) {}
 
   closeNavbar() {
-    const navbarToggle = document.getElementById('navbarNav');
-    if (navbarToggle && navbarToggle.classList.contains('show')) {
-      const collapseBtn = document.querySelector('[data-bs-target="#navbarNav"]') as HTMLElement;
-      if (collapseBtn) {
-        collapseBtn.click();
-      }
+    const navbarNav = document.getElementById('navbarNav');
+    const navbarToggle = document.querySelector('[data-bs-toggle="collapse"]') as HTMLButtonElement;
+    
+    if (navbarNav?.classList.contains('show') && navbarToggle) {
+      navbarToggle.click();
     }
   }
 }
