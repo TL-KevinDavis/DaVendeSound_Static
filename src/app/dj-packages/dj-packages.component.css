@@ -1,3 +1,4 @@
+component.css
 /* Image Styling */
 .item a {
   background-image: none !important; /* Explicitly remove any background images */
@@ -26,6 +27,9 @@
   .section-title {
     font-size: 1.5rem;
     margin: 15px 0 10px 0;
+    color: cyan;
+    text-decoration: underline;
+    font-weight: bold;
   }
 
   .section-heading {
@@ -34,6 +38,7 @@
     padding-right: 0;
     font-size: 1.2rem;
     margin: 10px 0;
+    color: white;
   }
 
   .section-subheading {
@@ -42,6 +47,8 @@
     padding-right: 0;
     font-size: 1rem;
     margin: 8px 0;
+    color: yellow;
+    font-weight: 600;
   }
 
   .disclaimer-text {
@@ -50,6 +57,7 @@
     padding-right: 0;
     font-size: 0.9rem;
     margin: 8px 0;
+    color: white;
   }
 
   .packages-list {
@@ -60,11 +68,13 @@
 
     .packages-list li {
       margin-bottom: 8px;
+      color: white;
     }
 
     .packages-list h5 {
       font-size: 0.95rem;
       margin: 3px 0;
+      color: white;
     }
 
   .description-text {
@@ -72,6 +82,7 @@
     font-size: 0.95rem;
     line-height: 1.5;
     margin: 15px 0;
+    color: white;
   }
 
   .section-content {
@@ -79,6 +90,7 @@
     font-size: 0.95rem;
     margin: 15px 0;
     line-height: 1.5;
+    color: white;
   }
 
   .responsive-video {
@@ -89,36 +101,45 @@
   .pricing-highlight {
     font-size: 1rem;
     margin: 15px 0;
+    color: yellow;
+    font-weight: 600;
+    text-decoration: underline;
   }
 
   .note-text {
     font-size: 0.95rem;
     margin-top: 15px;
+    color: yellow;
   }
 
   h1 {
     font-size: 1.4rem;
     margin: 12px 0;
+    color: white;
   }
 
   h2 {
     font-size: 1.2rem;
     margin: 12px 0;
+    color: white;
   }
 
   h3 {
     font-size: 1.1rem;
     margin: 10px 0;
+    color: white;
   }
 
   h4 {
     font-size: 1rem;
     margin: 10px 0;
+    color: white;
   }
 
   h5 {
     font-size: 0.95rem;
     margin: 8px 0;
+    color: white;
   }
 
   .video-container {
@@ -139,6 +160,9 @@
   .section-title {
     font-size: 1.75rem;
     margin: 20px 0 15px 0;
+    color: cyan;
+    text-decoration: underline;
+    font-weight: bold;
   }
 
   .section-heading {
@@ -147,6 +171,7 @@
     padding-right: 0;
     font-size: 1.35rem;
     margin: 12px 0;
+    color: white;
   }
 
   .section-subheading {
@@ -155,6 +180,8 @@
     padding-right: 0;
     font-size: 1.1rem;
     margin: 10px 0;
+    color: yellow;
+    font-weight: 600;
   }
 
   .disclaimer-text {
@@ -163,6 +190,7 @@
     padding-right: 0;
     font-size: 0.95rem;
     margin: 10px 0;
+    color: white;
   }
 
   .packages-list {
@@ -173,11 +201,13 @@
 
     .packages-list li {
       margin-bottom: 10px;
+      color: white;
     }
 
     .packages-list h5 {
       font-size: 1rem;
       margin: 5px 0;
+      color: white;
     }
 
   .description-text {
@@ -185,6 +215,7 @@
     font-size: 0.98rem;
     line-height: 1.55;
     margin: 18px 0;
+    color: white;
   }
 
   .section-content {
@@ -192,6 +223,7 @@
     font-size: 0.98rem;
     margin: 18px 0;
     line-height: 1.55;
+    color: white;
   }
 
   .responsive-video {
@@ -202,36 +234,45 @@
   .pricing-highlight {
     font-size: 1.1rem;
     margin: 18px 0;
+    color: yellow;
+    font-weight: 600;
+    text-decoration: underline;
   }
 
   .note-text {
     font-size: 1rem;
     margin-top: 20px;
+    color: yellow;
   }
 
   h1 {
     font-size: 1.6rem;
     margin: 15px 0;
+    color: white;
   }
 
   h2 {
     font-size: 1.4rem;
     margin: 15px 0;
+    color: white;
   }
 
   h3 {
     font-size: 1.2rem;
     margin: 12px 0;
+    color: white;
   }
 
   h4 {
     font-size: 1.1rem;
     margin: 12px 0;
+    color: white;
   }
 
   h5 {
     font-size: 1rem;
     margin: 10px 0;
+    color: white;
   }
 
   .video-container {
@@ -252,6 +293,9 @@
   .section-title {
     font-size: 1.9rem;
     margin: 22px 0 18px 0;
+    color: cyan;
+    text-decoration: underline;
+    font-weight: bold;
   }
 
   .section-heading {
@@ -260,6 +304,7 @@
     padding-right: 0;
     font-size: 1.45rem;
     margin: 15px 0;
+    color: white;
   }
 
   .section-subheading {
@@ -268,6 +313,8 @@
     padding-right: 0;
     font-size: 1.15rem;
     margin: 12px 0;
+    color: yellow;
+    font-weight: 600;
   }
 
   .disclaimer-text {
@@ -276,6 +323,7 @@
     padding-right: 0;
     font-size: 1rem;
     margin: 12px 0;
+    color: white;
   }
 
   .packages-list {
@@ -286,11 +334,13 @@
 
     .packages-list li {
       margin-bottom: 12px;
+      color: white;
     }
 
     .packages-list h5 {
       font-size: 1.05rem;
       margin: 5px 0;
+      color: white;
     }
 
   .description-text {
@@ -298,6 +348,7 @@
     font-size: 1rem;
     line-height: 1.6;
     margin: 20px auto;
+    color: white;
   }
 
   .section-content {
@@ -305,6 +356,7 @@
     font-size: 1rem;
     margin: 20px auto;
     line-height: 1.6;
+    color: white;
   }
 
   .responsive-video {
@@ -316,36 +368,45 @@
   .pricing-highlight {
     font-size: 1.15rem;
     margin: 20px 0;
+    color: yellow;
+    font-weight: 600;
+    text-decoration: underline;
   }
 
   .note-text {
     font-size: 1.05rem;
     margin-top: 20px;
+    color: yellow;
   }
 
   h1 {
     font-size: 1.8rem;
     margin: 18px 0;
+    color: white;
   }
 
   h2 {
     font-size: 1.6rem;
     margin: 18px 0;
+    color: white;
   }
 
   h3 {
     font-size: 1.35rem;
     margin: 14px 0;
+    color: white;
   }
 
   h4 {
     font-size: 1.2rem;
     margin: 14px 0;
+    color: white;
   }
 
   h5 {
     font-size: 1.05rem;
     margin: 10px 0;
+    color: white;
   }
 
   .video-container {
@@ -383,6 +444,7 @@
     margin: 15px 0;
     font-size: 1.5rem;
     padding-left: 75px;
+    color: white;
   }
 
   .section-subheading {
@@ -391,6 +453,7 @@
     margin: 10px 0;
     font-size: 1.2rem;
     padding-left: 75px;
+    font-weight: 600;
   }
 
   .disclaimer-text {
@@ -398,6 +461,7 @@
     margin: 10px 0;
     padding-left: 75px;
     font-size: 1rem;
+    color: white;
   }
 
   /* Lists */
@@ -409,10 +473,12 @@
 
     .packages-list li {
       margin-bottom: 10px;
+      color: white;
     }
 
     .packages-list h5 {
       margin: 5px 0;
+      color: white;
     }
 
   /* Description Text */
@@ -422,6 +488,7 @@
     max-width: 100%;
     padding: 0 50px;
     line-height: 1.6;
+    color: white;
   }
 
   /* Section Content */
@@ -431,6 +498,7 @@
     padding: 0 75px;
     max-width: 100%;
     line-height: 1.6;
+    color: white;
   }
 
   /* Video Container */
@@ -456,6 +524,7 @@
     text-decoration: underline;
     margin: 20px 0;
     font-size: 1.2rem;
+    font-weight: 600;
   }
 
   /* Note Text */
@@ -469,26 +538,31 @@
   h1 {
     font-size: 2rem;
     margin: 20px 0;
+    color: white;
   }
 
   h2 {
     font-size: 1.75rem;
     margin: 20px 0;
+    color: white;
   }
 
   h3 {
     font-size: 1.5rem;
     margin: 15px 0;
+    color: white;
   }
 
   h4 {
     font-size: 1.25rem;
     margin: 15px 0;
+    color: white;
   }
 
   h5 {
     font-size: 1.1rem;
     margin: 10px 0;
+    color: white;
   }
 }
 
@@ -503,33 +577,55 @@
 
   .section-title {
     font-size: 2.2rem;
+    color: cyan;
   }
 
   .section-heading {
     padding-left: 100px;
     font-size: 1.65rem;
+    color: white;
   }
 
   .section-subheading {
     padding-left: 100px;
     font-size: 1.35rem;
+    color: yellow;
   }
 
   .disclaimer-text {
     padding-left: 100px;
     font-size: 1.1rem;
+    color: white;
   }
 
   .packages-list {
     padding-left: 130px;
   }
 
+    .packages-list li {
+      color: white;
+    }
+
+    .packages-list h5 {
+      color: white;
+    }
+
   .description-text {
     padding: 0 75px;
+    color: white;
   }
 
   .section-content {
     padding: 0 100px;
+    color: white;
+  }
+
+  .pricing-highlight {
+    color: yellow;
+  }
+
+  .note-text {
+    color: yellow;
   }
 
   .responsive-video {
@@ -538,22 +634,27 @@
 
   h1 {
     font-size: 2.2rem;
+    color: white;
   }
 
   h2 {
     font-size: 1.9rem;
+    color: white;
   }
 
   h3 {
     font-size: 1.65rem;
+    color: white;
   }
 
   h4 {
     font-size: 1.4rem;
+    color: white;
   }
 
   h5 {
     font-size: 1.2rem;
+    color: white;
   }
 }
 
