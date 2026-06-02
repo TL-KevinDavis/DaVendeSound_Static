@@ -1,211 +1,585 @@
-/* Responsive Image Thumbnails - Must match .item dimensions for hexagon */
-.package-thumbnail {
-  height: 150px;
-  width: 250px !important;
+/* Image Styling */
+.item a {
+  background-image: none !important; /* Explicitly remove any background images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item img {
+  width: 105%;
+  height: 105%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
-@media (max-width: 768px) {
-  .package-thumbnail {
-    height: 100px;
-    width: 180px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .package-thumbnail {
-    height: 80px;
-    width: 150px !important;
-  }
-}
-
-/* Content Wrapper */
-.content-wrapper {
-  text-align: center;
-  margin-top: 5px;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 768px) {
+/* ============================================
+   MOBILE FIRST - Extra Small Devices (< 480px)
+   ============================================ */
+@media (max-width: 479px) {
   .content-wrapper {
-    padding: 0 15px;
+    padding: 0 10px;
+    margin-top: 0;
   }
-}
 
-/* Headings */
-.section-title {
-  text-decoration: underline;
-  color: cyan;
-  font-weight: bold;
-  text-align: center;
-  margin: 25px 0 20px 0;
-  font-size: 2rem;
-}
+  .section-title {
+    font-size: 1.5rem;
+    margin: 15px 0 10px 0;
+  }
 
-.section-heading {
-  text-align: left;
-  margin: 15px 0;
-  font-size: 1.5rem;
-  padding-left: 75px;
-}
-
-@media (max-width: 768px) {
   .section-heading {
     text-align: center;
     padding-left: 0;
     padding-right: 0;
+    font-size: 1.2rem;
+    margin: 10px 0;
   }
-}
 
-.section-subheading {
-  text-align: left;
-  color: yellow;
-  margin: 10px 0;
-  font-size: 1.2rem;
-  padding-left: 75px;
-}
-
-@media (max-width: 768px) {
   .section-subheading {
     text-align: center;
     padding-left: 0;
     padding-right: 0;
+    font-size: 1rem;
+    margin: 8px 0;
   }
-}
 
-.disclaimer-text {
-  text-align: left;
-  margin: 10px 0;
-  padding-left: 75px;
-  font-size: 1rem;
-}
-
-@media (max-width: 768px) {
   .disclaimer-text {
     text-align: center;
     padding-left: 0;
     padding-right: 0;
+    font-size: 0.9rem;
+    margin: 8px 0;
   }
-}
 
-/* Lists */
-.packages-list {
-  text-align: left;
-  margin-top: 20px;
-  padding-left: 100px;
-}
-
-@media (max-width: 768px) {
   .packages-list {
     text-align: center;
     padding-left: 0;
+    margin-top: 15px;
   }
-}
 
-.packages-list li {
-  margin-bottom: 10px;
-}
+    .packages-list li {
+      margin-bottom: 8px;
+    }
 
-.packages-list h5 {
-  margin: 5px 0;
-}
+    .packages-list h5 {
+      font-size: 0.95rem;
+      margin: 3px 0;
+    }
 
-/* Description Text */
-.description-text {
-  text-align: center;
-  margin: 20px auto;
-  max-width: 100%;
-  padding: 0 50px;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
   .description-text {
-    padding: 0 15px;
-    font-size: 1rem;
+    padding: 0 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 15px 0;
   }
-}
 
-/* Section Content */
-.section-content {
-  text-align: center;
-  margin: 20px auto;
-  padding: 0 75px;
-  max-width: 100%;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
   .section-content {
-    padding: 0 15px;
-    font-size: 1rem;
+    padding: 0 10px;
+    font-size: 0.95rem;
+    margin: 15px 0;
+    line-height: 1.5;
   }
-}
 
-/* Video Container */
-.video-container {
-  text-align: center;
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-}
-
-.responsive-video {
-  width: 650px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-@media (max-width: 768px) {
   .responsive-video {
     width: 100%;
+    max-width: 100%;
+  }
+
+  .pricing-highlight {
+    font-size: 1rem;
+    margin: 15px 0;
+  }
+
+  .note-text {
+    font-size: 0.95rem;
+    margin-top: 15px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    margin: 12px 0;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 12px 0;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  h5 {
+    font-size: 0.95rem;
+    margin: 8px 0;
+  }
+
+  .video-container {
+    padding: 10px 0;
+    margin: 15px 0;
   }
 }
 
-/* Pricing Highlight */
-.pricing-highlight {
-  font-style: italic;
-  color: yellow;
-  text-decoration: underline;
-  margin: 20px 0;
-  font-size: 1.2rem;
+/* ============================================
+   SMALL Devices (480px - 767px)
+   ============================================ */
+@media (min-width: 480px) and (max-width: 767px) {
+  .content-wrapper {
+    padding: 0 15px;
+    margin-top: 5px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    margin: 20px 0 15px 0;
+  }
+
+  .section-heading {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.35rem;
+    margin: 12px 0;
+  }
+
+  .section-subheading {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+
+  .disclaimer-text {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 0.95rem;
+    margin: 10px 0;
+  }
+
+  .packages-list {
+    text-align: center;
+    padding-left: 0;
+    margin-top: 18px;
+  }
+
+    .packages-list li {
+      margin-bottom: 10px;
+    }
+
+    .packages-list h5 {
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+
+  .description-text {
+    padding: 0 15px;
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin: 18px 0;
+  }
+
+  .section-content {
+    padding: 0 15px;
+    font-size: 0.98rem;
+    margin: 18px 0;
+    line-height: 1.55;
+  }
+
+  .responsive-video {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .pricing-highlight {
+    font-size: 1.1rem;
+    margin: 18px 0;
+  }
+
+  .note-text {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin: 15px 0;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin: 15px 0;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin: 12px 0;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    margin: 12px 0;
+  }
+
+  h5 {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .video-container {
+    padding: 15px 0;
+    margin: 18px 0;
+  }
 }
 
-/* Note Text */
-.note-text {
-  color: yellow;
-  margin-top: 25px;
-  font-size: 1.1rem;
+/* ============================================
+   TABLET Devices (768px - 1023px)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .content-wrapper {
+    padding: 0 20px;
+    margin-top: 5px;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+    margin: 22px 0 18px 0;
+  }
+
+  .section-heading {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 0;
+    font-size: 1.45rem;
+    margin: 15px 0;
+  }
+
+  .section-subheading {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 0;
+    font-size: 1.15rem;
+    margin: 12px 0;
+  }
+
+  .disclaimer-text {
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 0;
+    font-size: 1rem;
+    margin: 12px 0;
+  }
+
+  .packages-list {
+    text-align: left;
+    padding-left: 80px;
+    margin-top: 20px;
+  }
+
+    .packages-list li {
+      margin-bottom: 12px;
+    }
+
+    .packages-list h5 {
+      font-size: 1.05rem;
+      margin: 5px 0;
+    }
+
+  .description-text {
+    padding: 0 40px;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 20px auto;
+  }
+
+  .section-content {
+    padding: 0 60px;
+    font-size: 1rem;
+    margin: 20px auto;
+    line-height: 1.6;
+  }
+
+  .responsive-video {
+    width: 550px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .pricing-highlight {
+    font-size: 1.15rem;
+    margin: 20px 0;
+  }
+
+  .note-text {
+    font-size: 1.05rem;
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin: 18px 0;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin: 18px 0;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+    margin: 14px 0;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    margin: 14px 0;
+  }
+
+  h5 {
+    font-size: 1.05rem;
+    margin: 10px 0;
+  }
+
+  .video-container {
+    padding: 20px 0;
+    margin: 20px 0;
+  }
 }
 
-/* Ensure proper heading sizes */
-h1 {
-  font-size: 2rem;
-  margin: 20px 0;
+/* ============================================
+   DESKTOP Devices (1024px and above)
+   ============================================ */
+@media (min-width: 1024px) {
+  /* Content Wrapper */
+  .content-wrapper {
+    text-align: center;
+    margin-top: 5px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Headings */
+  .section-title {
+    text-decoration: underline;
+    color: cyan;
+    font-weight: bold;
+    text-align: center;
+    margin: 25px 0 20px 0;
+    font-size: 2rem;
+  }
+
+  .section-heading {
+    text-align: left;
+    margin: 15px 0;
+    font-size: 1.5rem;
+    padding-left: 75px;
+  }
+
+  .section-subheading {
+    text-align: left;
+    color: yellow;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    padding-left: 75px;
+  }
+
+  .disclaimer-text {
+    text-align: left;
+    margin: 10px 0;
+    padding-left: 75px;
+    font-size: 1rem;
+  }
+
+  /* Lists */
+  .packages-list {
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 100px;
+  }
+
+    .packages-list li {
+      margin-bottom: 10px;
+    }
+
+    .packages-list h5 {
+      margin: 5px 0;
+    }
+
+  /* Description Text */
+  .description-text {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 0 50px;
+    line-height: 1.6;
+  }
+
+  /* Section Content */
+  .section-content {
+    text-align: center;
+    margin: 20px auto;
+    padding: 0 75px;
+    max-width: 100%;
+    line-height: 1.6;
+  }
+
+  /* Video Container */
+  .video-container {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .responsive-video {
+    width: 650px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Pricing Highlight */
+  .pricing-highlight {
+    font-style: italic;
+    color: yellow;
+    text-decoration: underline;
+    margin: 20px 0;
+    font-size: 1.2rem;
+  }
+
+  /* Note Text */
+  .note-text {
+    color: yellow;
+    margin-top: 25px;
+    font-size: 1.1rem;
+  }
+
+  /* Ensure proper heading sizes */
+  h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    margin: 20px 0;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    margin: 15px 0;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
 }
 
-h2 {
-  font-size: 1.75rem;
-  margin: 20px 0;
+/* ============================================
+   LARGE DESKTOP (1440px and above)
+   ============================================ */
+@media (min-width: 1440px) {
+  .content-wrapper {
+    max-width: 1400px;
+    padding: 0 30px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-heading {
+    padding-left: 100px;
+    font-size: 1.65rem;
+  }
+
+  .section-subheading {
+    padding-left: 100px;
+    font-size: 1.35rem;
+  }
+
+  .disclaimer-text {
+    padding-left: 100px;
+    font-size: 1.1rem;
+  }
+
+  .packages-list {
+    padding-left: 130px;
+  }
+
+  .description-text {
+    padding: 0 75px;
+  }
+
+  .section-content {
+    padding: 0 100px;
+  }
+
+  .responsive-video {
+    width: 750px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  h3 {
+    font-size: 1.65rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin: 15px 0;
-}
+/* ============================================
+   PRINT MEDIA
+   ============================================ */
+@media print {
+  .content-wrapper {
+    max-width: 100%;
+    padding: 20px;
+  }
 
-h4 {
-  font-size: 1.25rem;
-  margin: 15px 0;
-}
+  .responsive-video {
+    display: none;
+  }
 
-h5 {
-  font-size: 1.1rem;
-  margin: 10px 0;
+  .video-container {
+    display: none;
+  }
+
+  h1, h2, h3, h4, h5 {
+    page-break-after: avoid;
+  }
+
+  .section-title,
+  .pricing-highlight {
+    color: #000;
+  }
 }

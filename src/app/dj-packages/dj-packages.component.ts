@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
 import { ModalService } from '../modal.service';
 import { MediaService } from '../media.service';
@@ -9,19 +10,35 @@ import { MediaService } from '../media.service';
   templateUrl: './dj-packages.component.html',
   styleUrls: ['./dj-packages.component.css']
 })
-export class DjPackagesComponent {
+export class DjPackagesComponent implements AfterViewInit {
   constructor(
-    public modalService: ModalService, 
+    public modalService: ModalService,
     public media: MediaService,
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
     // Set page title and meta description
     this.titleService.setTitle('DJ Packages | DaVende Sound');
-    this.metaService.updateTag({ 
-      name: 'description', 
+    this.metaService.updateTag({
+      name: 'description',
       content: 'Affordable DJ packages for weddings and events. Choose from small (100-150), medium (200-250), or large systems. Dance floor and accent lighting available. Call (601) 456-0007'
     });
+  }
+
+  ngAfterViewInit() {
+    // Only run in browser, not during SSR
+    if (isPlatformBrowser(this.platformId)) {
+      // Ensure images are visible within the clip-path hexagons
+      const images = document.querySelectorAll('.item img');
+      images.forEach((img: Element) => {
+        const imgElement = img as HTMLImageElement;
+        imgElement.style.width = '115%';
+        imgElement.style.height = '115%';
+        imgElement.style.objectFit = 'cover';
+        imgElement.style.objectPosition = 'center';
+      });
+    }
   }
 
   openModal(id: number): void {
