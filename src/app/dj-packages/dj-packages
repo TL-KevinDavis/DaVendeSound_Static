@@ -1,0 +1,27 @@
+component.css
+/* Responsive Image Thumbnails - Scale up to fill hexagon */
+.package-thumbnail {
+  height: 150px;
+  width: 250px !important;
+  object-fit: cover;
+  display: block;
+  /* Scale image to fill hexagon area, centering will crop the excess */
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+@media (max-width: 768px) {
+  .package-thumbnail {
+    height: 100px;
+    width: 180px !important;
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .package-thumbnail {
+    height: 80px;
+    width: 150px !important;
+    transform: scale(1.1);
+  }
+}
