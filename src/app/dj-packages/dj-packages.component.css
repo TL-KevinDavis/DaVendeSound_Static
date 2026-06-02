@@ -1,7 +1,7 @@
 /* Responsive Image Thumbnails - Must match .item dimensions for hexagon */
 .package-thumbnail {
   height: 150px;
-  width: 250px;
+  width: 250px !important;
   object-fit: cover;
   display: block;
 }
@@ -9,14 +9,14 @@
 @media (max-width: 768px) {
   .package-thumbnail {
     height: 100px;
-    width: 180px;
+    width: 180px !important;
   }
 }
 
 @media (max-width: 480px) {
   .package-thumbnail {
     height: 80px;
-    width: 150px;
+    width: 150px !important;
   }
 }
 
