@@ -24,7 +24,7 @@ export class PhotosVideoComponent implements AfterViewInit {
     this.titleService.setTitle('Photos & Videos | DaVende Sound');
     this.metaService.updateTag({ 
       name: 'description', 
-      content: 'View our wedding and event photo and video gallery. See DaVende Sound DJ services, lighting setups, and satisfied clients across Mississippi and Louisiana.'
+      content: 'View our photo and video gallery. See DaVende Sound DJ services, lighting setups, and satisfied clients across Mississippi and Louisiana.'
     });
   }
 
