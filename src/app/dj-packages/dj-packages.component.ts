@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 import { ModalService } from '../modal.service';
 import { MediaService } from '../media.service';
 

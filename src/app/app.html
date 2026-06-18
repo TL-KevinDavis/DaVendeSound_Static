@@ -5,53 +5,56 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8">
         <div class="text-center border border-warning border-3 pb-0 mx-2 mx-md-0">
-          <h1 class="fw-bold fst-italic display-6 text-warning m-0 px-2">DaVende Sound</h1>
-          <h2 class="mt-0 pt-0 mb-2 text-info pb-0 h5 px-2">Premier DJ, Sound and Lighting Services</h2>
+          <h1 class="fw-bold fst-italic display-1 text-warning m-0 px-2">DaVende Sound</h1>
+          <p class="fs-1 mt-0 pt-0 mb-2 text-white fw-bold pb-0 px-2">Premier DJ, Sound and Lighting Services</p>
+          <!-- Contact Info -->
+          <div class="container-fluid mt-2 mb-0 mt-lg-3">
+            <p class="fw-bold fst-italic fs-4 text-white text-center mb-0 px-2" style="line-height: 1.2;">
+              Call <a href="tel:601-456-0007" class="text-warning text-decoration-none">601-456-0007</a>
+              or email <a href="mailto:sales@davendesound.com" class="text-warning text-decoration-none">sales@davendesound.com</a>
+            </p>
+          </div>
+          <!-- Navigation Elements -->
+          <nav class="navbar navbar-expand-lg navbar-dark w-100 p-0 m-0 mb-0 mb-lg-0 pb-0 pb-lg-0">
+            <div class="container-fluid py-0 my-0">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto my-0 mb-0">
+                  <li class="nav-item px-2">
+                    <a class="nav-link fw-semibold text-decoration-none custom-nav-link"
+                       routerLink="/"
+                       routerLinkActive="text-warning"
+                       [routerLinkActiveOptions]="{ exact: true }"
+                       (click)="closeNavbar()">Home</a>
+                  </li>
+                  <li class="nav-item px-2">
+                    <a class="nav-link fw-semibold text-decoration-none custom-nav-link" routerLink="/dj-packages" routerLinkActive="text-warning" (click)="closeNavbar()">DJ Packages</a>
+                  </li>
+                  <li class="nav-item px-2">
+                    <a class="nav-link fw-semibold text-decoration-none custom-nav-link" routerLink="/photos-video" routerLinkActive="text-warning" (click)="closeNavbar()">Photo/Video</a>
+                  </li>
+                  <li class="nav-item px-2">
+                    <a class="nav-link fw-semibold text-decoration-none custom-nav-link" routerLink="/pro-sound" routerLinkActive="text-warning" (click)="closeNavbar()">Pro-Sound</a>
+                  </li>
+                  <li class="nav-item px-2">
+                    <a class="nav-link fw-semibold text-decoration-none custom-nav-link" routerLink="/locations" routerLinkActive="text-warning" (click)="closeNavbar()">Locations</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Contact Info -->
-  <div class="container-fluid mt-2 mt-lg-3">
-    <p class="fw-bold fst-italic fs-6 text-warning text-center m-0 px-2">
-      Call Us @ <a href="tel:601-456-0007" class="text-warning text-decoration-none">601-456-0007</a> or email <a href="mailto:sales@davendesound.com" class="text-warning text-decoration-none">sales@davendesound.com</a>
-    </p>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-md navbar-dark w-100 p-0 mt-2 mt-lg-3">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline" routerLink="/" (click)="closeNavbar()">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline" routerLink="/dj-packages" (click)="closeNavbar()">DJ Packages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline" routerLink="/photos-video" (click)="closeNavbar()">Photo/Video</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline" routerLink="/pro-sound" (click)="closeNavbar()">Pro Sound</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-info text-decoration-underline" routerLink="/locations" (click)="closeNavbar()">Locations</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 </header>
 
 <!-- Main Content -->
-<main class="container-fluid py-4 py-lg-5">
+<main class="container-fluid py-0 py-lg-0">
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-10" style="max-width: 1000px;">
+    <div class="p-0 m-3 clearfix d-block col-12 col-lg-10" style="max-width: 1000px;">
       <router-outlet></router-outlet>
     </div>
   </div>
@@ -67,7 +70,7 @@
           Email: <a href="mailto:sales@davendesound.com" class="text-warning text-decoration-none">sales@davendesound.com</a> |
           Phone: <a href="tel:601-456-0007" class="text-warning text-decoration-none">(601)456-0007</a>
         </p>
-        <p class="fs-6 m-0">Version 2.1.1</p>
+        <p class="fs-6 m-0">Version 2.2.1</p>
       </div>
     </div>
   </div>

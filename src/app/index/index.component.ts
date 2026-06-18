@@ -3,11 +3,12 @@ import { isPlatformBrowser } from '@angular/common';
 import { Title, Meta } from '@angular/platform-browser';
 import { ModalService } from '../modal.service';
 import { MediaService } from '../media.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-index',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css'],
   providers: [MediaService]

@@ -40,3 +40,5 @@ export const routes: Routes = [
   { path: 'locations/ruston-la', loadComponent: () => import('./locations/locations').then(m => m.Locations), data: { city: 'Ruston, LA', title: 'Ruston, LA DJ Services | DaVende Sound', description: 'DaVende Sound provides professional DJ, sound and lighting services in Ruston, LA. Call (601)456-0007 to book.' } },
   { path: 'locations/shreveport-la', loadComponent: () => import('./locations/locations').then(m => m.Locations), data: { city: 'Shreveport, LA', title: 'Shreveport, LA DJ Services | DaVende Sound', description: 'DaVende Sound provides professional DJ, sound and lighting services in Shreveport, LA. Call (601)456-0007 to book.' } },
 ];
+
+

@@ -1,9 +1,10 @@
+
 <ul class="container-hc" style="padding-left:0px; padding-top:0px; margin-top:20px; margin-bottom:10px">
-  <li class="item"><a (click)="openModal(1);currentSlide(1,1)" class="hover-shadow" title="01"><img [src]="media.url('RadianceParty.JPEG', true)" alt="01" style="height: 150px; width: 250px"></a></li>
-  <li class="item"><a (click)="openModal(1);currentSlide(2,1)" class="hover-shadow" title="02"><img [src]="media.url('MyersReception.JPG', true)" alt="02" style="height: 150px; width: 250px"></a></li>
-  <li class="item"><a (click)="openModal(1);currentSlide(3,1)" class="hover-shadow" title="03"><img [src]="media.url('UrsineWedding1.jpeg', true)" alt="03" style="height: 150px; width: 250px"></a></li>
-  <li class="item"><a (click)="openModal(1);currentSlide(4,1)" class="hover-shadow" title="04"><img [src]="media.url('ReevesWedding1.JPEG', true)" alt="04" style="height: 150px; width: 250px"></a></li>
-  <li class="item"><a (click)="openModal(1);currentSlide(5,1)" class="hover-shadow" title="05"><img [src]="media.url('LofreddoWedding1.JPEG', true)" alt="05" style="height: 150px; width: 250px"></a></li>
+  <li class="item"><a (click)="openModal(1);currentSlide(1,1)" class="hover-shadow" title="01"><img [src]="media.url('RadianceParty.JPEG', true)" alt="Birthday Party in Canton, MS" style="height: 150px; width: 250px"></a></li>
+  <li class="item"><a (click)="openModal(1);currentSlide(2,1)" class="hover-shadow" title="02"><img [src]="media.url('MyersReception.JPG', true)" alt="Accent Lighting, Raspberry Greene in Laurel, MS" style="height: 150px; width: 250px"></a></li>
+  <li class="item"><a (click)="openModal(1);currentSlide(3,1)" class="hover-shadow" title="03"><img [src]="media.url('UrsineWedding1.jpeg', true)" alt="Lake Caroline Owners Clubhouse in Madison, MS" style="height: 150px; width: 250px"></a></li>
+  <li class="item"><a (click)="openModal(1);currentSlide(4,1)" class="hover-shadow" title="04"><img [src]="media.url('ReevesWedding1.JPEG', true)" alt="Bellawood Venue in Florence, MS" style="height: 150px; width: 250px"></a></li>
+  <li class="item"><a (click)="openModal(1);currentSlide(5,1)" class="hover-shadow" title="05"><img [src]="media.url('LofreddoWedding1.JPEG', true)" alt="Reception at the Old Capital Inn, Jackson, MS" style="height: 150px; width: 250px"></a></li>
 </ul>
 <!-- The Modal/Lightbox -->
 <div id="myModal1" class="modal" style="navbar navbar-expand-sm">
@@ -32,62 +33,212 @@
     <!-- Next/previous controls -->
     <a class="prev" (click)="plusSlides(-1,1)">&#10094;</a>
     <a class="next" (click)="plusSlides(1,1)">&#10095;</a>
-    <!-- Caption text -->
-    <div class="caption-container">
-      <p id="caption"></p>
+  </div>
+</div>
+
+<section>
+  <div class="text-center">
+    <h1 class="text-warning text-decoration-underline">Contact us for a custom quote at your location/venue</h1>
+    <h4 class="h5 text-white mb-0 mt-1">We service ALL of Mississpi and Memphis, TN too!!</h4>
+    <h4 class="h5 text-white mb-0 mt-1">We Service ALL of Louisiana and all the way over to Mobile, AL!!</h4>
+  </div>
+</section>
+
+<section>
+  <div class="container my-3 p-0">
+    <div class="row align-items-top g-4">
+      <div class="col-lg-6">
+        <h2 class="h4 fw-bold mb-3 text-white">
+          Sound Systems Sized<br>
+          <span class="text-warning text-decoration-underline">For Your Number of Guest</span>
+        </h2>
+        <p class="h6 text-white mb-0" style="line-height: 1.5;">
+          From small celebrations to large-scale events, our audio systems cleanly scale to indulge guest lists from <span class="text-warning fw-semibold">50 to 2,000+ people</span>.
+        </p>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="d-flex flex-column gap-2">
+
+          <div class="p-3 text-white rounded-3 border border-warning bg-black bg-opacity-50">
+            <div class="d-flex align-items-start">
+              <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3 mt-3 flex-shrink-0" style="width: 32px; height: 32px;">
+                <i class="bi bi-speaker small fw-bold">✓</i>
+              </div>
+              <div style="flex: 1;">
+                <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2 mb-1">
+                  <h4 class="h6 fw-bold text-warning mb-0">Small: Banquets & Galleries</h4>
+                  <span class="badge bg-warning text-dark px-2 py-0.5" style="font-size: 0.75rem;">50 to 150 Guests</span>
+                </div>
+                <p class="fs-6 m-0 text-white" style="line-height: 1.3;">
+                  A premium, compact speaker column with an 18" subwoofer. Engineered specifically to deliver pristine audio fidelity and balanced coverage for smaller halls, galleries, or country club settings.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 text-white rounded-3 border border-warning bg-black bg-opacity-50">
+            <div class="d-flex align-items-start">
+              <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3 mt-3 flex-shrink-0" style="width: 32px; height: 32px;">
+                <i class="bi bi-amplifier small fw-bold">✓</i>
+              </div>
+              <div style="flex: 1;">
+                <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2 mb-1">
+                  <h4 class="h6 fw-bold text-warning mb-0">Medium: Pavilions & Grand Ballroom</h4>
+                  <span class="badge bg-warning text-dark fw-bold px-2 py-0.5" style="font-size: 0.75rem;">150 to 250 Guests</span>
+                </div>
+                <p class="fs-6 text-white small m-0" style="line-height: 1.3;">
+                  Our flagship high-ouput Configuration. Two main PA speakers columns paired with two 18" subwoofers, filling large ballrooms or banquet centers with punchy, concert-level energy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-<div class="content-wrapper">
-  <h1 class="section-title">DJ Packages</h1>
-  <h2 class="section-heading">We have <u>3 system sizes</u> for DJ packages</h2>
-  <h3 class="section-subheading">Contact us for a custom quote at your location/venue</h3>
-  <h5 class="disclaimer-text">(Our quotes are based on your location but our base rates are the lowest around)</h5>
-  <ul class="packages-list">
-    <li><h5>Our SMALL system will serve 100-150 people</h5></li>
-    <li><h5>Our MEDIUM system will serve 200-250 people</h5></li>
-    <li>
-      <h5>
-        Our LARGE system is <u>LARGE</u>. It will serve a 1 ACRE FIELD<br />
-        (This sytem is available for large scale events, see our Pro Sound page)
-      </h5>
-    </li>
-  </ul>
-  <h5 class="description-text">
-    You pick the music we play at your event.
-    Fill a song list on Spotify or Tidal and we will bring those songs to your event!!!!<br>
-    (Purchase our dance floor package and we script the lights to your songs!!)<br><br>
-    We also bring two wireless microphones to the event that your party can use to roast and toast the newlyweds with all night long.<br>
-  </h5>
-  <br /><br />
-  <h2 class="section-title">Dance Floor Lighting</h2>
-  <h4 class="section-content">
-    Our Dance Floor Lighting is a cut above the rest.<br />
-    We use integrated software to run our dance floor lights from scripts!!<br />
-    Our lights pulse, transition, chase and strobe to each and every song. <br />
-    We can bring in as many as 24 different lighting fixtures<br />
-    to create a stunning visual experience.<br />
-    Your dance floor will look like a headline concert or a high-end dance club!!<br />
-    We have a variety of lighting packages that will fit any budget.<br />
-    We can bring lighting truss and tripods to raise the lighting as high as 10 feet<br />
-    We also have 5 foot vertical 'totems' for venues with shorter ceilings.<br />
-    We can bring a smoke machine for entrance effects!! (Check with your venue first)<br />
-    The smoke machine also enhances the laser fixtures we have!!
-  </h4>
-  <div class="video-container">
-    <video controls="controls" autoplay [muted]="true" playsinline loop preload="auto" class="responsive-video">
-      <source [src]="media.url('LightingSample.mp4')" type="video/mp4" />
-    </video>
-  </div>
+</section>
 
-  <h3 class="pricing-highlight">We have packages from $200 all the way to our $700 Ultimate Package</h3>
-  <h2 class="section-title">Accent/Uplighting</h2>
-  <h4 class="section-content">
-    We have 8 battery powered LED 'PAR' lights that can <br />
-    place anywhere in your venue, no wires to trip over.<br />
-    Being battery powered we do not have to run wires to them.<br />
-    They can even be used for area lighting outdoors.
-  </h4>
-  <h3 class="pricing-highlight">Our Accent/Uplighting Package is $200</h3>
-  <h4 class="note-text">We can also quote you a-la-carte pricing on lights. Contact us for details</h4>
-</div>
+<section>
+  <div class="container my-3 p-0">
+    <div class="row align-items-top g-4">
+      <div class="col-lg-6">
+        <h2 class="h4 fw-bold mb-3 text-white">
+          Your Wedding.<br><span class="text-warning text-decoration-underline">Your Soundtrack.</span>
+        </h2>
+        <p class="h6 text-white mb-0" style=" line-height: 1.4;">
+          Tired of wedding DJs who ignore your requests and play whatever <span class="text-white fw-semibold">they</span> want? We believe the soundtrack to your reception should completely reflect your personal style and story.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <div class="d-flex flex-column gap-2">
+          <div class="p-3 text-white rounded-3 border border-warning bg-black bg-opacity-50">
+            <div class="d-flex align-items-start mb-3 w-100">
+              <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3 mt-3 flex-shrink-0" style="width: 32px; height: 32px;">
+                <i class="bi bi-music-note-list small fw-bold">✓</i>
+              </div>
+              <div style="flex: 1;">
+                <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2 mb-1 w-100">
+                  <h4 class="h6 fw-bold text-warning mb-1">Curate with Spotify & Tidal</h4>
+                  <p class="fs-6 text-white small m-0" style="line-height: 1.3;">
+                    Design your dream playlist directly on your favorite streaming platform. Your curated song lists is what we play for your celebration. And we still take request!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 text-white rounded-3 border border-warning bg-black bg-opacity-50">
+            <div class="d-flex align-items-start">
+              <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center me-3 mt-3 flex-shrink-0" style="width: 32px; height: 32px;">
+                <i class="bi bi-disc small fw-bold">✓</i>
+              </div>
+              <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2 mb-1">
+                <h4 class="h6 fw-bold text-warning mb-1">1+ Million Track Catalog</h4>
+                <p class="fs-6 text-white small m-0" style="line-height: 1.3;">
+                  From your grand entrance to the final song of the night—we handle any style, any era, and any request to keep your dance floor packed.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col-12 mt-1">
+    <div class="pt-1 p-3 bg-black border border-warning rounded-3 text-center d-sm-flex align-items-center justify-content-between bg-opacity-50">
+      <div class="text-sm-start mb-2 mb-sm-0">
+        <h4 class="h6 text-warning fw-bold mb-0">Large: Arenas, Fields & Festivals</h4>
+        <p class="mb-0 text-white small">Large-scale production designed explicitly for large settings. Intended for entertaining up to 2500 people.<br /> Explore our Pro-Sound Page for details on these services</p>
+      </div>
+      <a routerLink="/pro-sound" class="btn btn-outline-warning btn-sm px-1 py-2 px-4 mx-4 fs-7 fw-semibold" style="max-width: 165  px; line-height: 1.2; white-space: nowrap">
+        Explore Pro-Sound
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col-12 mt-4">
+    <div class="pt-1 p-3 bg-black border border-warning rounded-3 d-sm-flex justify-content-between bg-opacity-50">
+      <div class="text-sm-start mb-2 mb-sm-0">
+        <div class="content-wrapper">
+          <h2 class="text-warning mb-0">DJ Packages also include:</h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="p-4 h-100 rounded-3 border border-0 bg-opacity-100 d-flex flex-column">
+                <h4 class="fw-bold text-warning text-decoration-underline mb-2 mt-0">Wireless Microphones</h4>
+                <p class="text-white fs-5 m-0" style="line-height: 1.5;">
+                  Two wireless microphones so your party can roast and toast you all night long.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="p-4 h-100 rounded-3 border border-0 bg-opacity-100 d-flex flex-column">
+                <h4 class="h5 fw-bold text-warning text-decoration-underline mb-2 mt-0">MC Services</h4>
+                <p class="text-white fs-5 m-0" style="line-height: 1.5;">
+                  To announce the wedding party or any other announcements you may have.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col-12 mt-4">
+    <div class="pt-1 border bg-black border-warning rounded-3 d-sm-flex bg-opacity-50 justify-content-center">
+      <div class="text-sm-start mb-2 mb-sm-0 align-content-center">
+        <div class="content-wrapper">
+          <h1 class="text-warning text-decoration-underline">Dance Floor Lighting</h1>
+          <h5 class="section-content">
+            Our Dance Floor Lighting is a cut above the rest.<br />
+            We use integrated software to run our dance floor lights from scripts!!<br />
+            Our lights pulse, transition, chase and strobe to each and every song. <br />
+            We have a variety of lighting packages that will fit any budget.<br />
+            We can even bring a smoke machine for entrance effects!!<br />
+            (Check with your venue first)<br />
+          </h5>
+          <div class="video-container" id="Lighting-Sample-Video">
+            <video controls="controls" autoplay [muted]="true" playsinline loop preload="auto" class="responsive-video">
+              <source [src]="media.url('LightingSample.mp4')" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col-12 mt-4">
+    <div class="pt-1 p-3 bg-black border border-warning rounded-3 d-sm-flex justify-content-between bg-opacity-50">
+      <div class="text-sm-start mb-2 mb-sm-0">
+        <div class="content-wrapper align-content-center">
+          <h1 class="text-warning text-decoration-underline">Accent/Uplighting</h1>
+          <h5 class="section-content">
+            We have battery powered LED 'PAR' lights, place them anywhere with no wires.<br />
+            We can set them to your wedding colors or any other color you desire.<br />
+            Use them as accent lighting on walls or drapes. Light the wedding cake.<br />
+            They can even be used for area lighting outdoors.
+          </h5>
+          <div class="d-flex justify-content-center my-3">
+            <img [src]="media.url('MyersReception.JPG')" style="width: 83%; max-width: 100%;" alt="Myers Reception at Raspberry Greene in Laurel, MS">
+          </div>
+          <h2 class="text-warning text-decoration-underline">Accent/Uplighting Package $200</h2>
+          <h5 class="section-content">We can also quote you a-la-carte pricing on lights. Contact us for details</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

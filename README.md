@@ -1,3 +1,8 @@
+# Registrar Info
+
+Google WorkSpace is the billing agent.
+SquareSpace is the DNS agent.
+
 # DaVendeSoundStatic
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.2.
