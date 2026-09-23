@@ -62,10 +62,11 @@
   color: #ffc107 !important;
   text-shadow: 0 0 8px rgba(255, 193, 7, 0.4) !important;
   text-decoration: underline !important;
+  font-weight: 800 !important;
 }
 
-/* Active route styling for Home link */
-custom-nav-link.text-warning {
+/* Active route styling */
+.custom-nav-link.active-link {
   color: #ffc107 !important;
   text-shadow: 0 0 8px rgba(255, 193, 7, 0.4) !important;
   text-decoration: underline !important;
