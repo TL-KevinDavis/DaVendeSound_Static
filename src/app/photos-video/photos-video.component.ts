@@ -20,7 +20,7 @@ export class PhotosVideoComponent implements AfterViewInit {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.seo.setPage(
-      'Photos & Videos | DaVende Sound',
+      'DJ Photos & Videos in Vicksburg, MS | DaVende Sound',
       'View our photo and video gallery. See DaVende Sound DJ services, lighting setups, and satisfied clients across Mississippi and Louisiana.',
       '/photos-video'
     );

@@ -19,7 +19,7 @@ export class DjPackagesComponent implements AfterViewInit {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.seo.setPage(
-      'DJ Packages | DaVende Sound',
+      'DJ Packages in Vicksburg, MS | DaVende Sound',
       'Affordable DJ packages for weddings and events. Choose from small (100-150), medium (200-250), or large systems. Dance floor and accent lighting available. Call (601) 456-0007',
       '/dj-packages'
     );

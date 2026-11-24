@@ -273,7 +273,8 @@ section {
 }
 
 /* Ensure proper heading sizes */
-h1 {
+h1:not(.display-3),
+.keep-h1-size {
   font-size: 2rem;
   margin: 20px 0;
 }

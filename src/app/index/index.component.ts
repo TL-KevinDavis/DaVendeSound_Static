@@ -23,7 +23,7 @@ export class IndexComponent implements AfterViewInit {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.seo.setPage(
-      'DaVende Sound | Premier DJ, Sound & Lighting Services',
+      'DJ, Sound & Lighting in Vicksburg, MS | DaVende Sound',
       'Professional DJ, sound system, and lighting services for weddings, parties, and corporate events in Mississippi, Louisiana, and Alabama. Call (601) 456-0007',
       '/'
     );

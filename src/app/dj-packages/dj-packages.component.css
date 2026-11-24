@@ -111,7 +111,7 @@
     color: yellow;
   }
 
-  h1 {
+  h1, .keep-h1-size {
     font-size: 1.4rem;
     margin: 12px 0;
     color: white;
@@ -244,7 +244,7 @@
     color: yellow;
   }
 
-  h1 {
+  h1, .keep-h1-size {
     font-size: 1.6rem;
     margin: 15px 0;
     color: white;
@@ -378,7 +378,7 @@
     color: yellow;
   }
 
-  h1 {
+  h1, .keep-h1-size {
     font-size: 1.8rem;
     margin: 18px 0;
     color: white;
@@ -534,7 +534,7 @@
   }
 
   /* Ensure proper heading sizes */
-  h1 {
+  h1, .keep-h1-size {
     font-size: 2rem;
     margin: 20px 0;
     color: white;
@@ -631,7 +631,7 @@
     width: 750px;
   }
 
-  h1 {
+  h1, .keep-h1-size {
     font-size: 2.2rem;
     color: white;
   }
