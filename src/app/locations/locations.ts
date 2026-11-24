@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SeoService } from '../seo.service';
 
 @Component({
   selector: 'app-locations',
@@ -12,25 +12,18 @@ export class Locations implements OnInit {
   
   constructor(
     private route: ActivatedRoute,
-    private titleService: Title,
-    private metaService: Meta
+    private router: Router,
+    private seo: SeoService
   ) {}
 
   ngOnInit(): void {
-    // Read the route data you defined in app.routes.ts
     this.route.data.subscribe(data => {
-      // Set the page title
-      if (data['title']) {
-        this.titleService.setTitle(data['title']);
-      }
-      
-      // Set the meta description
-      if (data['description']) {
-        this.metaService.updateTag({ 
-          name: 'description', 
-          content: data['description'] 
-        });
-      }
+      const path = this.router.url.split('?')[0].split('#')[0] || '/locations';
+      this.seo.setPage(
+        data['title'] || 'Wedding & Event Locations | DaVende Sound',
+        data['description'] || 'DaVende Sound provides DJ, sound, and lighting for weddings and events across Mississippi, Louisiana, Alabama, and the Greater Memphis area. Call (601) 456-0007.',
+        path
+      );
     });
   }
 }

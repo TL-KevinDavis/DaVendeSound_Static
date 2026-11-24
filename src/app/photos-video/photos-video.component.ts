@@ -1,8 +1,8 @@
 import { Component, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { Title, Meta } from '@angular/platform-browser';
 import { MediaService } from '../media.service';
 import { ModalService } from '../modal.service';
+import { SeoService } from '../seo.service';
 
 @Component({
   selector: 'app-photos-video',
@@ -16,16 +16,14 @@ export class PhotosVideoComponent implements AfterViewInit {
   constructor(
     public media: MediaService, 
     public modalService: ModalService,
-    private titleService: Title,
-    private metaService: Meta,
+    private seo: SeoService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    // Set page title and meta description
-    this.titleService.setTitle('Photos & Videos | DaVende Sound');
-    this.metaService.updateTag({ 
-      name: 'description', 
-      content: 'View our photo and video gallery. See DaVende Sound DJ services, lighting setups, and satisfied clients across Mississippi and Louisiana.'
-    });
+    this.seo.setPage(
+      'Photos & Videos | DaVende Sound',
+      'View our photo and video gallery. See DaVende Sound DJ services, lighting setups, and satisfied clients across Mississippi and Louisiana.',
+      '/photos-video'
+    );
   }
 
   ngAfterViewInit(): void {

@@ -1,9 +1,9 @@
 import { Component, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { Title, Meta } from '@angular/platform-browser';
 import { ModalService } from '../modal.service';
 import { MediaService } from '../media.service';
 import { RouterLink } from '@angular/router';
+import { SeoService } from '../seo.service';
 
 @Component({
   selector: 'app-index',
@@ -19,16 +19,14 @@ export class IndexComponent implements AfterViewInit {
   constructor(
     public modalService: ModalService, 
     public media: MediaService,
-    private titleService: Title,
-    private metaService: Meta,
+    private seo: SeoService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    // Set page title and meta description
-    this.titleService.setTitle('DaVende Sound | Premier DJ, Sound & Lighting Services');
-    this.metaService.updateTag({ 
-      name: 'description', 
-      content: 'Professional DJ, sound system, and lighting services for weddings, parties, and corporate events in Mississippi, Louisiana, and Alabama. Call (601) 456-0007'
-    });
+    this.seo.setPage(
+      'DaVende Sound | Premier DJ, Sound & Lighting Services',
+      'Professional DJ, sound system, and lighting services for weddings, parties, and corporate events in Mississippi, Louisiana, and Alabama. Call (601) 456-0007',
+      '/'
+    );
   }
 
   ngAfterViewInit() {

@@ -6,7 +6,7 @@ import { ProSound } from './pro-sound/pro-sound.component';
 import { Locations } from './locations/locations';
 
 export const routes: Routes = [
-  { path: '', component: IndexComponent },
+  { path: '', pathMatch: 'full', component: IndexComponent },
   { path: 'dj-packages', component: DjPackagesComponent },
   { path: 'photos-video', component: PhotosVideoComponent },
   { path: 'pro-sound', component: ProSound },

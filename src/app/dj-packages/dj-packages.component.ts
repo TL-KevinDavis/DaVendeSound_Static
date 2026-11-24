@@ -1,9 +1,9 @@
 import { Component, AfterViewInit, PLATFORM_ID, Inject } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Title, Meta } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ModalService } from '../modal.service';
 import { MediaService } from '../media.service';
+import { SeoService } from '../seo.service';
 
 @Component({
   selector: 'app-dj-packages',
@@ -15,16 +15,14 @@ export class DjPackagesComponent implements AfterViewInit {
   constructor(
     public modalService: ModalService,
     public media: MediaService,
-    private titleService: Title,
-    private metaService: Meta,
+    private seo: SeoService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    // Set page title and meta description
-    this.titleService.setTitle('DJ Packages | DaVende Sound');
-    this.metaService.updateTag({
-      name: 'description',
-      content: 'Affordable DJ packages for weddings and events. Choose from small (100-150), medium (200-250), or large systems. Dance floor and accent lighting available. Call (601) 456-0007'
-    });
+    this.seo.setPage(
+      'DJ Packages | DaVende Sound',
+      'Affordable DJ packages for weddings and events. Choose from small (100-150), medium (200-250), or large systems. Dance floor and accent lighting available. Call (601) 456-0007',
+      '/dj-packages'
+    );
   }
 
   ngAfterViewInit() {

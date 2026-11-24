@@ -1,13 +1,54 @@
 {
+  "trailingSlash": "never",
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/assets/*", "/*.ico", "/*.css", "/*.js", "/*.png", "/*.jpg", "/*.svg"]
+    "exclude": ["/assets/*", "/*.ico", "/*.css", "/*.js", "/*.png", "/*.jpg", "/*.svg", "/sitemap.xml", "/robots.txt"]
   },
-"routes": [
+  "routes": [
+    {
+      "route": "/index.html",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/Photos",
+      "redirect": "/photos-video",
+      "statusCode": 301
+    },
+    {
+      "route": "/ProSound",
+      "redirect": "/pro-sound",
+      "statusCode": 301
+    },
+    {
+      "route": "/Packages",
+      "redirect": "/dj-packages",
+      "statusCode": 301
+    },
+    {
+      "route": "/photos-video/index.html",
+      "redirect": "/photos-video",
+      "statusCode": 301
+    },
+    {
+      "route": "/pro-sound/index.html",
+      "redirect": "/pro-sound",
+      "statusCode": 301
+    },
+    {
+      "route": "/dj-packages/index.html",
+      "redirect": "/dj-packages",
+      "statusCode": 301
+    },
+    {
+      "route": "/locations/index.html",
+      "redirect": "/locations",
+      "statusCode": 301
+    },
     {
       "route": "/assets/*",
       "headers": {
-      "Cache-Control": "public, max-age=31536000, immutable"
+        "Cache-Control": "public, max-age=31536000, immutable"
       }
     }
   ],
